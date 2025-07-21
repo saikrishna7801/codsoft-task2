@@ -1,0 +1,386 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+}
+
+
+#desktop-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #0077cc;
+}
+
+
+#profile {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 40px;
+  background-color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  gap: 40px;
+}
+
+.section_pic-container img {
+  width: 300px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid orangered;
+  border-left: 8px solid; 
+  border-right: 8px solid;
+}
+
+.section__text {
+  max-width: 500px;
+  padding: 20px;
+}
+
+.section__text__p1 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.title {
+  font-size: 36px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.section__text__p2 {
+  font-size: 20px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.btn-container {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.btn-1,
+.btn-2 {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #0077cc;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-1:hover,
+.btn-2:hover {
+  background-color: #005fa3;
+}
+
+#social-container {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+#About{
+    border-top: 40px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    gap: 10px;
+}
+#about{
+    border-top:100px;
+    text-align: center;
+    font-weight: bold;
+    
+    
+    
+}
+#about {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f5f5f5;
+}
+
+#about h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: #333;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.profile-pic img {
+  width: 300px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.info-section {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.info-box {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.info-box h3 {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.description {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 6px;
+  line-height: 1.6;
+  color: #444;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+}
+#home {
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+#About {
+  padding: 60px 40px;
+  background-color: #f9f9f9;
+  margin-bottom: 10px;
+}
+#experience-me {
+  padding: 40px;
+  background: linear-gradient(to right, #f8f9fa, #e9ecef);
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+}
+
+#h-1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #343a40;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.skills-category {
+  margin-bottom: 40px;
+}
+
+.skills-category h2 {
+  font-size: 1.8rem;
+  color: #495057;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #adb5bd;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.skills-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.skills-list span {
+  background-color: #dee2e6;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 1rem;
+  color: #212529;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  cursor: default;
+}
+
+.skills-list span:hover {
+  background-color: #343a40;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+#projects{
+  height: 100vh;
+  margin-top: 200px;
+  margin-left: 30px;
+  
+  
+}
+.container{
+  display: flex;
+  margin-left: 50px;
+  gap: 50px;
+  padding: 50px;
+  
+}
+.container-1{
+  background-color: #ccc;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-top: 50px;
+  border-radius: 10px;
+ box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+ cursor: pointer;
+ transition: all 1000ms ease;
+
+}
+.container-2{
+  background-color: #ccc;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-top: 50px;
+  border-radius: 10px;
+ box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+ cursor: pointer;
+ transition: all 1000ms ease;
+
+}
+.container-3{
+  background-color: #ccc;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-top: 50px;
+  border-radius: 10px;
+ box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+ cursor: pointer;
+ transition: all 1000ms ease;
+
+}
+.container-1:hover{
+  transform: scale(1.1);
+}
+.container-2:hover{
+  transform: scale(1.1);
+}
+.container-3:hover{
+  transform: scale(1.1);
+}
+#Contact{
+  height: 100vh;
+  margin-top: 200px;
+  margin-left: 30px;
+  
+  
+}
+.container-c{
+  display: flex;
+  margin-left: 50px;
+  gap: 50px;
+  padding: 50px;
+  
+}
+.container-c1{
+  background-color: #ccc;
+  padding: 50px;
+  box-sizing: border-box;
+  margin-top: 50px;
+  border-radius: 10px;
+ box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+ cursor: pointer;
+ transition: all 1000ms ease;
+
+}
+.container-c2{
+  background-color: #ccc;
+  padding: 50px;
+  box-sizing: border-box;
+  margin-top: 50px;
+  border-radius: 10px;
+ box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+ cursor: pointer;
+ transition: all 1000ms ease;
+
+}
+.container-c3{
+  background-color: #ccc;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-top: 50px;
+  border-radius: 10px;
+ box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+ cursor: pointer;
+ transition: all 1000ms ease;
+
+}
+.container-c1:hover{
+  transform: scale(1.1);
+}
+.container-c2:hover{
+  transform: scale(1.1);
+}
+.container-c3:hover{
+  transform: scale(1.1);
+}
+    
+
+
+

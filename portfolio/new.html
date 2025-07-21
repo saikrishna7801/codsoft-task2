@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,
+                 minimum-scale=1.0, 
+                 maximum-scale=1.0, 
+                 user-scalable=no" />
+    <title>YouTube Video Embed Code
+        Generator</title>
+</head>
+
+<!-- Custom CSS -->
+<style>
+    body {
+        background-position: center;
+        background-color: black;
+        min-height: 100%;
+    }
+
+    h1 {
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        text-shadow: 2px 2px 5px Blue;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    button {
+        background-color: #3B008D;
+        color: white;
+        padding: 10px 10px;
+        margin: 5px 0 5px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+        border-radius: 12px;
+    }
+
+    button:hover {
+        background-color: indigo;
+        border-radius: 4px;
+        opacity: 40;
+    }
+
+    input[type=text] {
+        width: 100%;
+        padding: 10px 10px;
+        margin: 5px 0 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        resize: vertical;
+    }
+
+    textarea {
+        width: 100%;
+        height: 220px;
+        padding: 10px 10px;
+        box-sizing: border-box;
+        border: 4px solid #ccc;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+        font-size: 16px;
+        resize: none;
+    }
+
+    .center {
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+        padding: 10px;
+    }
+</style>
+
+<!-- YouTube Video Embed Code Tool Structure -->
+
+<body>
+    <div class="center">
+        <h1><b>YOUTUBE VIDEO EMBED CODE
+                GENERATOR</b></h1><br>
+        <input type="text" 
+               placeholder="paste the youtube video url here" 
+               name="url" id="url">
+        <button onclick=
+         "generateEmbedCode(document.getElementById('url').value)">
+            Generate Embed Code
+        </button>
+        <p id="Video-Preview" 
+           style="text-align:left;
+                  color: white;">
+        </p>
+        <p id="Video-Output"></p>
+        <p id="Code-Preview" 
+           style="text-align:left; 
+                  color: white;">
+        </p>
+        <form>
+            <textarea id="Embed-Code">
+              </textarea>
+        </form>
+        <button onclick="copyEmbedCode()">
+            Copy Embed Code
+        </button>
+    </div>
+
+    <script>
+        // Function will genearate embed code for 
+        // the YouTube Video based on the given input url.
+        function generateEmbedCode(url) {
+            let value;
+            if (url.slice(0, 32) == "https://www.youtube.com/watch?v=") {
+                value = url.slice(32, 43);
+            }
+            else if (url.slice(0, 31) == "http://www.youtube.com/watch?v=") {
+                value = url.slice(31, 42);
+            }
+            else if (url.slice(0, 30) == "https://m.youtube.com/watch?v=") {
+                value = url.slice(30, 41);
+            }
+            else if (url.slice(0, 29) == "http://m.youtube.com/watch?v=") {
+                value = url.slice(29, 40);
+            }
+            else if (url.slice(0, 22) == "m.youtube.com/watch?v=") {
+                value = url.slice(22, 33);
+            }
+            else if (url.slice(0, 28) == "https://youtube.com/watch?v=") {
+                value = url.slice(28, 39);
+            }
+            else if (url.slice(0, 27) == "http://youtube.com/watch?v=") {
+                value = url.slice(27, 38);
+            }
+            else if (url.slice(0, 20) == "youtube.com/watch?v=") {
+                value = url.slice(20, 31);
+            }
+            else if (url.slice(0, 17) == "https://youtu.be/") {
+                value = url.slice(17, 28);
+            }
+            else if (url.slice(0, 16) == "http://youtu.be/") {
+                value = url.slice(16, 27);
+            }
+            else if (url.slice(0, 9) == "youtu.be/") {
+                value = url.slice(9, 20);
+            }
+            else {
+                alert(
+         "Invalid Input - Kindly Check the URL and Paste the Valid URL");
+            }
+            if (value != null) {
+                let result = `<style>
+                            .embed-container {
+                                position: relative;
+                                padding-bottom: 56.25%;
+                                height: 0;
+                                overflow: hidden;
+                                max-width: 100%;
+                            }
+
+                            .embed-container iframe,
+                            .embed-container object,
+                            .embed-container embed {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                            }
+                        </style>
+                        <div class='embed-container'>
+                            <iframe src=
+                            'https://www.youtube.com/embed/" + value + "'
+                                frameborder='0'
+                                allowfullscreen>
+                            </iframe>
+                        </div>`;
+                document.getElementById("Video-Preview")
+                    .innerHTML = "Video Preview:";
+                document.getElementById("Video-Output")
+                    .innerHTML = result;
+                document.getElementById("Code-Preview")
+                    .innerHTML = "Copy your Embed Code:";
+                document.getElementById("Embed-Code")
+                    .value = result;
+            }
+        }
+
+        // This is the Copy Function for 
+        // copying the Generated Script
+        function copyEmbedCode() {
+            var copyText = document.getElementById("Embed-Code");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            document.execCommand("copy");
+        }
+    </script>
+</body>
+
+</html>
